@@ -18,83 +18,93 @@ import template10 from "@/assets/template-10.jpg";
 const templates = [
   {
     id: 1,
-    name: "Elegant Floral",
+    name: "Blossom",
     category: "Wedding",
     image: template1,
     likes: 247,
-    popular: true
+    popular: true,
+    tier: "Basic"
   },
   {
     id: 2,
-    name: "Modern Minimalist",
-    category: "Birthday",
+    name: "Serenity",
+    category: "Wedding",
     image: template2,
-    likes: 189,
-    popular: false
+    likes: 298,
+    popular: true,
+    tier: "Basic"
   },
   {
     id: 3,
-    name: "Watercolor Dreams",
-    category: "Baby Shower",
+    name: "Amour",
+    category: "Wedding",
     image: template3,
-    likes: 156,
-    popular: false
+    likes: 342,
+    popular: true,
+    tier: "Basic"
   },
   {
     id: 4,
-    name: "Art Deco Celebration",
-    category: "Graduation",
+    name: "Harmony",
+    category: "Wedding",
     image: template4,
-    likes: 134,
-    popular: false
+    likes: 276,
+    popular: true,
+    tier: "Basic"
   },
   {
     id: 5,
-    name: "Vintage Romance",
-    category: "Anniversary",
+    name: "Twilight",
+    category: "Wedding",
     image: template5,
     likes: 198,
-    popular: true
+    popular: false,
+    tier: "Standard"
   },
   {
     id: 6,
-    name: "Playful Party",
-    category: "Kids Birthday",
+    name: "Petal",
+    category: "Wedding",
     image: template6,
     likes: 167,
-    popular: false
+    popular: false,
+    tier: "Standard"
   },
   {
     id: 7,
-    name: "Golden Elegance",
-    category: "Engagement",
+    name: "Luna",
+    category: "Wedding",
     image: template7,
     likes: 223,
-    popular: true
+    popular: true,
+    tier: "Standard"
   },
   {
     id: 8,
-    name: "Tropical Vibes",
-    category: "Summer Party",
+    name: "Radiance",
+    category: "Wedding",
     image: template8,
-    likes: 145,
-    popular: false
+    likes: 189,
+    popular: false,
+    tier: "Premium"
   },
   {
     id: 9,
-    name: "Corporate Chic",
-    category: "Business Event",
+    name: "Eternity",
+    category: "Wedding",
     image: template9,
-    likes: 112,
-    popular: false
+    likes: 298,
+    popular: true,
+    tier: "Premium"
   },
   {
     id: 10,
-    name: "Rustic Charm",
-    category: "Countryside",
+    name: "Opaline",
+    category: "Wedding",
     image: template10,
-    likes: 178,
-    popular: false
+    likes: 267,
+    popular: true,
+    tier: "Premium"
   }
 ];
 
