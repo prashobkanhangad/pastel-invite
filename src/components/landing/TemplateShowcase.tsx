@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Star, Eye } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 // Import template images
 import template1 from "@/assets/template-1.jpg";
@@ -109,6 +110,8 @@ const templates = [
 ];
 
 const TemplateShowcase = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="py-20 bg-surface">
       <div className="container mx-auto px-4">
@@ -137,6 +140,7 @@ const TemplateShowcase = () => {
               key={template.id} 
               className="group cursor-pointer transition-smooth hover:shadow-elegant hover:-translate-y-2 bg-gradient-card border-border animate-fade-up"
               style={{animationDelay: `${index * 0.1}s`}}
+              onClick={() => navigate(`/template/${template.id}`)}
             >
               <div className="relative overflow-hidden rounded-t-lg">
                 {template.popular && (
@@ -157,6 +161,10 @@ const TemplateShowcase = () => {
                     variant="hero" 
                     size="sm" 
                     className="opacity-0 group-hover:opacity-100 transition-smooth scale-90 group-hover:scale-100"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigate(`/template/${template.id}`);
+                    }}
                   >
                     <Eye className="w-4 h-4 mr-2" />
                     Preview
@@ -179,7 +187,15 @@ const TemplateShowcase = () => {
                   {template.name}
                 </h3>
                 
-                <Button variant="soft" size="sm" className="w-full">
+                <Button 
+                  variant="soft" 
+                  size="sm" 
+                  className="w-full"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    navigate(`/template/${template.id}`);
+                  }}
+                >
                   Select Template
                 </Button>
               </div>
