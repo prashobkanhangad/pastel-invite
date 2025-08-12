@@ -45,7 +45,7 @@ const Header = () => {
             <Button variant="ghost" onClick={() => navigate("/signin")}>
               Sign In
             </Button>
-            <Button variant="hero">Get Started</Button>
+            <Button variant="hero" onClick={() => navigate("/create")}>Create Invitation</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -84,7 +84,16 @@ const Header = () => {
                 >
                   Sign In
                 </Button>
-                <Button variant="hero" className="w-full">Get Started</Button>
+                <Button 
+                  variant="hero" 
+                  className="w-full"
+                  onClick={() => {
+                    navigate("/create");
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  Create Invitation
+                </Button>
               </div>
             </nav>
           </div>

@@ -6,6 +6,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import TemplatePreview from "./pages/TemplatePreview";
+import CreateInvitation from "./pages/CreateInvitation";
+import InvitationView from "./pages/InvitationView";
 import SignIn from "./pages/SignIn";
 import AdminDashboard from "./pages/AdminDashboard";
 import NotFound from "./pages/NotFound";
@@ -21,6 +23,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/template/:id" element={<TemplatePreview />} />
+          <Route path="/create" element={<CreateInvitation />} />
+          <Route path="/invitation/:id" element={<InvitationView />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/admin" element={<AdminDashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
